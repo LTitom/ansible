@@ -1,0 +1,9 @@
+---
+- name: Run Frontend container
+  docker_container:
+    name: devops-front
+    image: devops-front:latest
+    state: started
+    restart_policy: always
+    networks:
+      - name: my_network
